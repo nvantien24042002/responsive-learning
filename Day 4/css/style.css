@@ -1,66 +1,93 @@
-*,
-*::before,
-*::after {
+    *,
+    *::before,
+    *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-body {
+    }
+
+    body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
-}
-a {
-    color: inherit;
+    background-color: #fff;
+    }
 
-}
-.container {
+    a {
+    color: inherit;
+    }
+
+    /* =========================
+    Container
+    ========================= */
+    .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-}
+    }
 
-.section-padding {
+    /* =========================
+    Section spacing
+    ========================= */
+    .section-padding {
     padding: 48px 0;
-}
-.service-section {
-    background-color: #a3a3a3;
-}
-.service-section__header {
+    }
+
+    /* =========================
+    Features Section
+    ========================= */
+    .features-section {
+    background-color: #f7f7f7;
+    }
+
+    .features-section__header {
     max-width: 720px;
     margin-bottom: 32px;
-    background-color: aliceblue;
-    padding: 1rem;
-}
-.service-section__label {
+    }
+
+    .features-section__label {
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-}
-.service-section__title {
+    letter-spacing: 1px;
+    }
+
+    .features-section__title {
     margin-bottom: 16px;
     font-size: 32px;
     line-height: 1.2;
-}
-.service-section__text {
+    }
+
+    .features-section__text {
     font-size: 16px;
     line-height: 1.6;
-}
-.service-section__list {
+    }
+
+    /* =========================
+    Features List
+    ========================= */
+    .features-section__list {
     display: flex;
-    flex-direction: column;   /* Tư duy mobie first*/
+    flex-direction: column;
     gap: 24px;
-}
-.service-card {
+    }
+
+    /* =========================
+    Feature Card
+    ========================= */
+    .feature-card {
     padding: 24px;
-    border: 1px solid #c12424;
+    border: 1px solid #ddd;
     border-radius: 16px;
-    background-color: #f8f8f8;
-}
-.service-card__icon {
+    background-color: #fff;
+    }
+
+    .feature-card__number {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     width: 48px;
     height: 48px;
     margin-bottom: 20px;
@@ -68,44 +95,77 @@ a {
     border-radius: 50%;
     background-color: #222;
     color: #fff;
+
+    font-size: 16px;
     font-weight: 700;
-}
-.service-card__title {
+    }
+
+    .feature-card__title {
     margin-bottom: 12px;
     font-size: 22px;
     line-height: 1.3;
-}
-.service-card__text {
+    }
+
+    .feature-card__text {
     font-size: 16px;
     line-height: 1.6;
-}
-@media (min-width:768px) {
-    .service-section__header {
+    }
+
+/* =========================
+    Tablet: >= 768px
+========================= */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .section-padding {
+        padding: 72px 0;
+    }
+
+    .features-section__header {
         margin-bottom: 40px;
     }
-    .service-section__title {
+
+    .features-section__title {
         font-size: 44px;
     }
-    .service-section__text {
+
+    .features-section__text {
         font-size: 18px;
     }
-    .service-card {
-        flex-basis: calc((100% - 24px) / 2);
-    }
-    .service-section__list {
+
+    .features-section__list {
         flex-direction: row;
         flex-wrap: wrap;
     }
-}
-@media (min-width: 1024px) {
-    .service-section__header {
-        margin-bottom: 48px;
-    }
-    .service-section__title {
-        font-size: 52px;
-    }
-    .service-card {
-        flex-basis: calc((100% - 48px) / 3);
+
+    .feature-card {
+        flex-basis: calc((100% - 24px) / 2);
     }
 }
 
+/* =========================
+    Desktop: >= 1024px
+========================= */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .section-padding {
+        padding: 96px 0;
+    }
+
+    .features-section__header {
+        margin-bottom: 48px;
+    }
+
+    .features-section__title {
+        font-size: 56px;
+    }
+
+    .feature-card {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+}
