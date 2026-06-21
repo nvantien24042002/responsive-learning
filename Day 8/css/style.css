@@ -1,0 +1,209 @@
+    /* =========================
+    Base Reset
+    ========================= */
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #fff;
+    }
+
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    button {
+    font: inherit;
+    }
+
+    /* =========================
+    Container
+    ========================= */
+    .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    }
+
+    /* =========================
+    Section Spacing
+    ========================= */
+    .section-padding {
+    padding: 64px 0;
+    }
+    /* Img */
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+        position: relative;
+        z-index: 999;
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .site-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 24px;
+    }
+    .site-header__logo {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    /* =========================
+    Mobile Toggle Button
+    ========================= */
+    .site-header__toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        width: 44px;
+        height: 44px;
+
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    .site-header__toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #222;
+    }
+
+    /* =========================
+    Mobile Navigation
+    ========================= */
+    .site-header__nav {
+        position: absolute;
+        top: 100%;
+        left: 16px;
+        right: 16px;
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .site-header__nav.is-open {
+        display: flex;
+    }
+
+    .site-header__link {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .site-header__button {
+        display: none;
+    }
+    /* =========================
+        Hero Section
+    ========================= */
+    .hero-section {
+        background-color: #f5f5f5;
+    }
+    .hero-section__content {
+        max-width: 720px;
+        background-color: #fff;
+        padding: 10px;
+    }
+    .hero-section__label {
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .hero-section__title {
+        margin-bottom: 16px;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .hero-section__text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    /* =========================
+        Tablet: >= 768px
+    ========================= */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .hero-section__title {
+        font-size: 48px;
+    }
+
+    .hero-section__text {
+        font-size: 18px;
+    }
+}
+/* =========================
+    Desktop: >= 1024px
+========================= */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .site-header__toggle {
+        display: none;
+    }
+
+    .site-header__nav {
+        position: static;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 28px;
+
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .site-header__button {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 999px;
+        background-color: #222;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .hero-section__title {
+        font-size: 60px;
+    }
+}
